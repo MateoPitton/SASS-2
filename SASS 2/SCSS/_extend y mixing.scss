@@ -1,0 +1,21 @@
+/*extend*/
+.redSocial{
+    border: 3px red;
+    background-color: aqua;
+    width: 100px;
+    height: 50px;
+    padding: 10px;
+    font-size: medium;
+}
+.redSocialDos{
+    @extend .redSocial;
+    border: orangered;
+}
+/*mixing*/
+@mixin tamaño ($ancho, $alto){
+    width: $ancho;
+    height: $alto;
+}
+.caja{
+    @include tamaño(600px, 250px)
+}
